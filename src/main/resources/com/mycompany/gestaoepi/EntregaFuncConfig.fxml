@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.EntregaFuncConfigController">
+        <Label fx:id="lb_info" layoutX="206.0" layoutY="14.0" text="Novo Entrega">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="446.0" layoutY="65.0" mnemonicParsing="false" onAction="#backDash" prefHeight="28.0" prefWidth="79.0" style="-fx-background-color: #5CB85C;" text="➜ Voltar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="35.0" layoutY="110.0" text="Data de entrega:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   <DatePicker fx:id="dp_entrega" layoutX="35.0" layoutY="131.0" prefHeight="35.0" prefWidth="494.0" promptText="Data Entrega" />
+   <Label layoutX="35.0" layoutY="173.0" text="EPI:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="cb_epi" layoutX="35.0" layoutY="193.0" prefHeight="35.0" prefWidth="494.0" promptText="Selecione o EPI" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5px;" />
+   <Label layoutX="36.0" layoutY="235.0" text="Funcionário:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="cb_func" layoutX="36.0" layoutY="255.0" prefHeight="35.0" prefWidth="494.0" promptText="Selecione o Funcionário" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5px;" />
+   <Button fx:id="bt_salvar" layoutX="37.0" layoutY="368.0" mnemonicParsing="false" onAction="#saveData" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #5CB85C;" text="Salvar" textFill="WHITE">
+        <font>
+            <Font size="14.0" />
+        </font>
+   </Button>
+   <Label layoutX="37.0" layoutY="294.0" text="Quantidade">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Label>
+   <ComboBox fx:id="cb_quant" layoutX="37.0" layoutY="314.0" prefHeight="35.0" prefWidth="494.0" promptText="Selecione a quantidade" style="-fx-background-color: white; -fx-border-color: silver; -fx-border-radius: 5px;" />
+   <Label fx:id="lb_status" layoutX="33.0" layoutY="413.0" prefHeight="35.0" prefWidth="492.0" style="-fx-border-radius: 5px;" visible="false" />
+</AnchorPane>
