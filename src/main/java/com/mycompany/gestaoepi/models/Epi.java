@@ -68,34 +68,6 @@ public class Epi {
         return this.dataValidade;
     }
 
-    public void setId(String _id) {
-        this.id = _id;
-    }
-
-    public void setNome(String _nome) {
-        this.nome = _nome;
-    }
-
-    public void setCa(String _ca) {
-        this.ca = _ca;
-    }
-
-    public void setMarca(String _marca) {
-        this.marca = _marca;
-    }
-
-    public void setVidaUtil(int _vidaUtil) {
-        this.vidaUtil = _vidaUtil;
-    }
-
-    public void setQuant(int _quant) {
-        this.quant = _quant;
-    }
-
-    public void setDataValidade(Date _dataValidade) {
-        this.dataValidade = _dataValidade;
-    }
-    
     public int dataToVenc(){
        Date today = new Date();
        
@@ -112,7 +84,6 @@ public class Epi {
     }
 
     public boolean isValid(LocalDate entrega, int quantidade) {
-        System.out.println("Teste maluco");
         Date data = Date.from(entrega.atStartOfDay(ZoneId.systemDefault()).toInstant());
         try {
             Calendar c = Calendar.getInstance();
@@ -127,9 +98,6 @@ public class Epi {
             System.out.println(ex.toString());
         }
 
-        System.out.println("Teste doido");
-
-        System.out.println("Laranja");
         return true;
     }
 }

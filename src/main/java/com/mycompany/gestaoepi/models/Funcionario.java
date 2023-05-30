@@ -43,26 +43,6 @@ public class Funcionario {
         return this.setor;
     }
     
-    public void setId(String _id){
-        this.id = _id;
-    }
-    
-    public void setReg(String _reg){
-        this.reg = _reg;
-    }
-    
-    public void setNome(String _nome){
-        this.nome = _nome;
-    }
-    
-    public void setEmail(String _email){
-        this.email = _email;
-    }
-    
-    public void setSetor(String _setor){
-        this.setor = _setor;
-    }
-    
     @Override
     public String toString(){
         return this.nome;

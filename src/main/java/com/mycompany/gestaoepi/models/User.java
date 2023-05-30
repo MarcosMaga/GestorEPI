@@ -36,20 +36,4 @@ public class User {
     public String getEmpresa(){
         return this.empresa;
     }
-    
-    public void setId(String val){
-        this.id = val;
-    }
-    
-    public void setEmail(String val){
-        this.email = val;
-    }
-    
-    public void setNome(String val){
-        this.nome = val;
-    }
-    
-    public void setEmpresa(String val){
-        this.nome = val;
-    }
 }

@@ -5,7 +5,6 @@ com\mycompany\gestaoepi\controllers\FuncConfigController.class
 com\mycompany\gestaoepi\controllers\EntregaGestorController.class
 com\mycompany\gestaoepi\dao\FuncDao.class
 com\mycompany\gestaoepi\dao\EpiDao.class
-com\mycompany\gestaoepi\components\ButtonDelete.class
 com\mycompany\gestaoepi\dao\SetorDao.class
 com\mycompany\gestaoepi\helpers\ScreenHelpers.class
 com\mycompany\gestaoepi\database\DatabaseConnection.class

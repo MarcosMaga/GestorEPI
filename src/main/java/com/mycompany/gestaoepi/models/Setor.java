@@ -30,15 +30,7 @@ public class Setor {
     public String getNome(){
         return this.nome;
     }
-    
-    public void setCod(String _cod){
-        this.cod = _cod;
-    }
-    
-    public void setNome(String _nome){
-        this.nome = _nome;
-    }
-    
+        
     @Override
     public String toString(){
         return this.nome;
