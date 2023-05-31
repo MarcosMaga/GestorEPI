@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.EntregaGestorController">
+<AnchorPane fx:id="rootPane" prefHeight="509.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.EntregaGestorController">
     <Label fx:id="lb_info" layoutX="179.0" layoutY="14.0" text="Gerenciar Entregas">
          <font>
             <Font size="24.0" />

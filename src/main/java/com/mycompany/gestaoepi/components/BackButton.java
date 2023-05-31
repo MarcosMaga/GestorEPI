@@ -8,6 +8,8 @@ package com.mycompany.gestaoepi.components;
  *
  * @author Marcos
  */
-public class BackButton {
-    
+public class BackButton extends ButtonConcret{
+    public BackButton(String teste) {
+        super(teste);
+    }
 }

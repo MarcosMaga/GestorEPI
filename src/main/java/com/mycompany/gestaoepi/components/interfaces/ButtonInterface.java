@@ -4,10 +4,13 @@
  */
 package com.mycompany.gestaoepi.components.interfaces;
 
+import javafx.event.ActionEvent;
+
 /**
  *
  * @author Marcos
  */
 public interface ButtonInterface {
-    
+    abstract void action(ActionEvent e);
+    abstract void setTextButton(String value);
 }

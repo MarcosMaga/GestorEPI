@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.BackButton;
 import com.mycompany.gestaoepi.dao.EntregaDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
 import com.mycompany.gestaoepi.models.Entrega;
@@ -18,6 +19,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
@@ -36,6 +39,9 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
     private int teste=0;
     
     @FXML
+    private AnchorPane rootPane;
+    
+    @FXML
     private GridPane gp_dados;
     
     @FXML
@@ -45,6 +51,7 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        rootPane.getChildren().add(new BackButton("Teste"));
         EntregaDao dao = new EntregaDao();
         entregas = dao.SelectEntrega(App.usuario.getId());
         

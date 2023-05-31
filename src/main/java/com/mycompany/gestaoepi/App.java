@@ -108,6 +108,10 @@ public class App extends Application {
         }
     }
     
+    public static ScrollPane getDashScreen(){
+        return App.dashScreen;
+    }
+    
     public static Object changeMainScreenData(String fxml){
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
