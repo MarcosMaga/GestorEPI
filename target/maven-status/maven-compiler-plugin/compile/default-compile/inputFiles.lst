@@ -7,6 +7,7 @@ C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\module-info.j
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\models\Funcionario.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\components\interfaces\ButtonInterface.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\database\DatabaseReturn.java
+C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\components\ExitButton.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\models\Setor.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\components\BackButton.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\components\factories\ButtonFactory.java

@@ -8,11 +8,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="774.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.DashboardController">
+<AnchorPane fx:id="rootPane" prefHeight="533.0" prefWidth="774.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.DashboardController">
    <children>
       <AnchorPane prefHeight="46.0" prefWidth="774.0" style="-fx-border-color: #E7E7E7; -fx-background-color: #F8F8F8;">
          <children>
-            <Button layoutX="726.0" layoutY="11.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #D9534F;" text="Sair" textFill="WHITE" />
             <Label fx:id="tf_display" layoutX="14.0" layoutY="10.0" text="Empresa | Nome">
                <font>
                   <Font size="18.0" />

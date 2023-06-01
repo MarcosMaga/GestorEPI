@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.models.User;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -25,6 +27,9 @@ import javafx.stage.Stage;
  * @author Marcos
  */
 public class DashboardController implements Initializable {
+    
+    @FXML
+    private AnchorPane rootPane;
    
     @FXML
     private Label tf_display;
@@ -38,13 +43,11 @@ public class DashboardController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ButtonFactory factory = new ButtonFactory();
+        rootPane.getChildren().add(factory.createButton("exitbutton"));
         App.setDashScreen(sp_dash);
         tf_display.setText(App.usuario.getEmpresa() + " | " + App.usuario.getNome());
         App.changeMainScreen("DashScreen");
-    }
-
-    public void exit(){
-        App.changeScreen("Login");
     }
     
     public void navigateSetor(ActionEvent e){

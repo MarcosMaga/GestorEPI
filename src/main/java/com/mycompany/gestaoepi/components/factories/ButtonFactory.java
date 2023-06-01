@@ -6,6 +6,7 @@ package com.mycompany.gestaoepi.components.factories;
 
 import com.mycompany.gestaoepi.components.BackButton;
 import com.mycompany.gestaoepi.components.ButtonConcret;
+import com.mycompany.gestaoepi.components.ExitButton;
 
 /**
  *
@@ -15,6 +16,8 @@ public class ButtonFactory {
     public ButtonConcret createButton(String type){
         if(type.equalsIgnoreCase("backbutton"))
             return new BackButton();
+        else if(type.equalsIgnoreCase("exitbutton"))
+            return new ExitButton();
         else
             throw new IllegalArgumentException("Tipo de botão desconhecido!");
     }
