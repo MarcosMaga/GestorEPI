@@ -8,17 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="597.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.EpiGestorController">
+<AnchorPane fx:id="rootPane" prefHeight="597.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.EpiGestorController">
     <Label fx:id="lb_info" layoutX="227.0" layoutY="14.0" text="Editar EPI">
          <font>
             <Font size="24.0" />
          </font>
     </Label>
-    <Button layoutX="446.0" layoutY="65.0" mnemonicParsing="false" onAction="#backDash" prefHeight="28.0" prefWidth="79.0" style="-fx-background-color: #5CB85C;" text="➜ Voltar" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-    </Button>
     <Label layoutX="35.0" layoutY="118.0" text="EPI:">
       <font>
          <Font name="System Bold" size="14.0" />

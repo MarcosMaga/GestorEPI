@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.SetorConfigController">
+<AnchorPane fx:id="rootPane" prefHeight="494.0" prefWidth="557.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.gestaoepi.controllers.SetorConfigController">
    <children>
       <Label fx:id="lb_info" layoutX="219.0" layoutY="14.0" text="Novo Setor">
          <font>
@@ -26,11 +26,6 @@
       </Label>
       <TextField fx:id="tf_nome" layoutX="33.0" layoutY="184.0" prefHeight="35.0" prefWidth="492.0" />
       <Button layoutX="32.0" layoutY="247.0" mnemonicParsing="false" onAction="#saveData" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #5CB85C;" text="Salvar" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="446.0" layoutY="65.0" mnemonicParsing="false" onAction="#backDash" prefHeight="28.0" prefWidth="79.0" style="-fx-background-color: #5CB85C;" text="➜ Voltar" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>

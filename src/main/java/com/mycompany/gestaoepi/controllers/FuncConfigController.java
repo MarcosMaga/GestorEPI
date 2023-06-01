@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.FuncDao;
 import com.mycompany.gestaoepi.dao.SetorDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
@@ -21,6 +22,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -31,6 +33,9 @@ import javafx.scene.paint.Color;
 public class FuncConfigController extends ScreenHelpers implements Initializable {
     
     private List<Setor> setores;
+    
+    @FXML
+    private AnchorPane rootPane;
 
     @FXML
     private ComboBox<Setor> cb_setor;
@@ -51,6 +56,8 @@ public class FuncConfigController extends ScreenHelpers implements Initializable
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ButtonFactory factory = new ButtonFactory();
+        rootPane.getChildren().add(factory.createButton("backbutton"));
         SetorDao setordao = new SetorDao();
         setores = setordao.SelectSetor(App.usuario.getId());
         ObservableList<Setor> obsSetor = FXCollections.observableArrayList(setores);

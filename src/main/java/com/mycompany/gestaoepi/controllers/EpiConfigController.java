@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.EpiDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
 import java.net.URL;
@@ -19,6 +20,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -27,6 +29,9 @@ import javafx.scene.paint.Color;
  * @author Marcos
  */
 public class EpiConfigController extends ScreenHelpers implements Initializable {
+    
+    @FXML
+    private AnchorPane rootPane;
 
     @FXML
     private TextField tf_nome;
@@ -54,6 +59,8 @@ public class EpiConfigController extends ScreenHelpers implements Initializable 
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ButtonFactory factory = new ButtonFactory();
+        rootPane.getChildren().add(factory.createButton("backbutton"));
         List<Integer> values = setNumberValues(1, 2500);
         ObservableList<Integer> obsInt = FXCollections.observableArrayList(values);
         cb_quant.setItems(obsInt);

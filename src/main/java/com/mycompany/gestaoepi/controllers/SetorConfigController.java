@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.SetorDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
 import java.net.URL;
@@ -13,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -22,6 +24,9 @@ import javafx.scene.paint.Color;
  */
 
 public class SetorConfigController extends ScreenHelpers implements Initializable {
+    
+    @FXML
+    private AnchorPane rootPane;
 
     @FXML
     private TextField tf_cod;
@@ -36,6 +41,8 @@ public class SetorConfigController extends ScreenHelpers implements Initializabl
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ButtonFactory factory = new ButtonFactory();
+        rootPane.getChildren().add(factory.createButton("backbutton"));
         // TODO
     }
     

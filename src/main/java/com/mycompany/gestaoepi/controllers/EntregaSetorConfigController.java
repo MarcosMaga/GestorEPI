@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.EntregaDao;
 import com.mycompany.gestaoepi.dao.EpiDao;
 import com.mycompany.gestaoepi.dao.FuncDao;
@@ -25,6 +26,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -39,6 +41,9 @@ public class EntregaSetorConfigController extends ScreenHelpers implements Initi
      */
     private List<Epi> epis;
     private List<Setor> setores;
+    
+    @FXML
+    private AnchorPane rootPane;
 
     @FXML
     private DatePicker dp_entrega;
@@ -57,6 +62,8 @@ public class EntregaSetorConfigController extends ScreenHelpers implements Initi
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ButtonFactory factory = new ButtonFactory();
+        rootPane.getChildren().add(factory.createButton("backbutton"));
         EpiDao daoEpi = new EpiDao();
         epis = daoEpi.SelectEpi(App.usuario.getId());
         ObservableList<Epi> obsEpi = FXCollections.observableArrayList(epis);

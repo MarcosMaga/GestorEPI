@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.EpiDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
 import com.mycompany.gestaoepi.models.Epi;
@@ -24,6 +25,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -37,6 +39,9 @@ public class EpiGestorController extends ScreenHelpers implements Initializable 
      */
     
     private List<Epi> epis;
+    
+    @FXML
+    private AnchorPane rootPane;
     
     @FXML
     private ComboBox<Epi> cb_epi;
@@ -64,6 +69,8 @@ public class EpiGestorController extends ScreenHelpers implements Initializable 
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ButtonFactory factory = new ButtonFactory();
+        rootPane.getChildren().add(factory.createButton("backbutton"));
         EpiDao dao = new EpiDao();
         epis = dao.SelectEpi(App.usuario.getId());
         List<Integer> values = setNumberValues(1, 2500);

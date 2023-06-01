@@ -7,17 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="557.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.mycompany.gestaoepi.controllers.EntregaSetorConfigController">
+<AnchorPane fx:id="rootPane" prefHeight="509.0" prefWidth="557.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.mycompany.gestaoepi.controllers.EntregaSetorConfigController">
     <Label fx:id="lb_info" layoutX="206.0" layoutY="14.0" text="Novo Entrega">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="446.0" layoutY="65.0" mnemonicParsing="false" onAction="#backDash" prefHeight="28.0" prefWidth="79.0" style="-fx-background-color: #5CB85C;" text="➜ Voltar" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
       <Label layoutX="35.0" layoutY="110.0" text="Data de entrega:">
          <font>
             <Font name="System Bold" size="14.0" />
