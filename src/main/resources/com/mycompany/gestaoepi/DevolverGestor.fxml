@@ -7,17 +7,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="488.0" prefWidth="572.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.mycompany.gestaoepi.controllers.DevolverGestorController">
+<AnchorPane fx:id="rootPane" prefHeight="488.0" prefWidth="572.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.mycompany.gestaoepi.controllers.DevolverGestorController">
     <Label fx:id="lb_info" layoutX="179.0" layoutY="14.0" text="Devolver Entrega">
          <font>
             <Font size="24.0" />
          </font>
     </Label>
-    <Button layoutX="446.0" layoutY="65.0" mnemonicParsing="false" onAction="#backDash" prefHeight="28.0" prefWidth="79.0" style="-fx-background-color: #5CB85C;" text="➜ Voltar" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-    </Button>
    <Pane layoutX="37.0" layoutY="129.0" prefHeight="162.0" prefWidth="489.0" style="-fx-border-color: silver; -fx-background-color: #F8F8F8;">
       <children>
          <Label layoutX="12.0" layoutY="8.0" text="Data de Entrega:">

@@ -9,6 +9,7 @@ C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\database\DatabaseReturn.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\models\Setor.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\components\BackButton.java
+C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\components\factories\ButtonFactory.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\components\ButtonConcret.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\controllers\FuncGestorController.java
 C:\Users\Marcos\Documents\NetBeansProjects\GestorEPI\src\main\java\com\mycompany\gestaoepi\controllers\FuncConfigController.java

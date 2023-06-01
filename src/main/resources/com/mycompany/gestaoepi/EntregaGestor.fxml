@@ -15,11 +15,6 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button layoutX="446.0" layoutY="65.0" mnemonicParsing="false" onAction="#backDash" prefHeight="28.0" prefWidth="79.0" style="-fx-background-color: #5CB85C;" text="➜ Voltar" textFill="WHITE">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
    <GridPane fx:id="gp_dados" gridLinesVisible="true" layoutX="6.0" layoutY="107.0" prefHeight="394.0" prefWidth="544.0">
      <columnConstraints>
        <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.0" minWidth="10.0" prefWidth="83.0" />

@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.EntregaDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
 import com.mycompany.gestaoepi.models.Entrega;
@@ -21,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
@@ -43,6 +45,9 @@ public class ArquivoEntregaController extends ScreenHelpers implements Initializ
     private int teste=0;
     
     @FXML
+    private AnchorPane rootPane;
+    
+    @FXML
     private GridPane gp_dados;
     
     @FXML
@@ -53,6 +58,8 @@ public class ArquivoEntregaController extends ScreenHelpers implements Initializ
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ButtonFactory factory = new ButtonFactory();
+        rootPane.getChildren().add(factory.createButton("backbutton"));
         searchData("");
     }
     

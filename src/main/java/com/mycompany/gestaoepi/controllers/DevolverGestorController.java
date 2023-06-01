@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.EntregaDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
 import com.mycompany.gestaoepi.models.Entrega;
@@ -16,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
@@ -27,6 +29,10 @@ public class DevolverGestorController extends ScreenHelpers implements Initializ
     /**
      * Initializes the controller class.
      */
+    
+    @FXML
+    private AnchorPane rootPane;
+    
     @FXML
     private Label lb_data_entrega;
     
@@ -49,6 +55,8 @@ public class DevolverGestorController extends ScreenHelpers implements Initializ
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        ButtonFactory factory = new ButtonFactory();
+        rootPane.getChildren().add(factory.createButton("backbutton"));
         // TODO
     }
     
