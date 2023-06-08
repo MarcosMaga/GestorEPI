@@ -173,6 +173,54 @@ public class EntregaDao {
         return null;
     }
     
+    public Entrega SelectEntregaById(String user_id, String entrega_id){
+        Connection con = null;
+        ResultSet rs = null;
+        Statement st = null;
+        
+        Entrega set = null;
+        
+        try {
+            con = DatabaseReturn.getConnection();
+            String sql = "SELECT entregas.id_entrega, funcionarios.nome, epis.nome_epi, epis.vida_util_epi, entregas.data_entrega, entregas.data_devolucao, entregas.quant_entrega, entregas.confirma_entrega FROM entregas, funcionarios, epis WHERE entregas.id_funcionario = funcionarios.id_funcionario AND entregas.id_epi = epis.id_epi AND entregas.id_user = "+ user_id + " AND entregas.data_devolucao IS NULL AND entregas.id_entrega = " + entrega_id + ";";
+            System.out.println(sql);
+            st = (Statement) con.createStatement();
+            rs = st.executeQuery(sql);
+              
+            while(rs.next()){
+                String data;
+                
+                try{
+                    data = rs.getDate("data_devolucao").toString();
+                } catch(Exception ex){
+                    data = null;
+                }
+                
+                set = new Entrega(Integer.toString(rs.getInt("id_entrega")), rs.getString("nome"), rs.getString("nome_epi"), rs.getInt("vida_util_epi"), rs.getDate("data_entrega").toString(), data, rs.getInt("quant_entrega"), rs.getBoolean("confirma_entrega"));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UsersDao.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+                
+                if (st != null) 
+                    st.close();
+                
+                if (rs != null) 
+                    rs.close();
+            
+            } catch (SQLException ex) {
+                Logger.getLogger(UsersDao.class.getName()).log(Level.SEVERE, null, ex);
+                return null;
+            }
+        }
+            
+        return set;
+    }
+    
      public List<Entrega> SelectEntregaWeek(String user_id){
         List<Entrega> entregas = new ArrayList<Entrega>();
         

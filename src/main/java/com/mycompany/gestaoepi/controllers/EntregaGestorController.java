@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.DevolverButton;
 import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.EntregaDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
@@ -149,7 +150,7 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
             bt.setOnAction((event) -> {
                 devolverEntrega(event);
             });
-            gp_dados.add(bt, 7, i+1);
+            gp_dados.add(new DevolverButton("bt_devolver_" + entregas.get(i).getId()), 7, i+1);
         }
     }
     
