@@ -5,6 +5,7 @@
 package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
+import com.mycompany.gestaoepi.components.ConfirmLabel;
 import com.mycompany.gestaoepi.components.DevolverButton;
 import com.mycompany.gestaoepi.components.TextData;
 import com.mycompany.gestaoepi.components.VencimentoLabel;
@@ -88,26 +89,12 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
         if(j > entregas.size())
             j -= entregas.size();
         
-       
         for(int i=0; i < index; i++, j++){    
             gp_dados.add(new TextData(formatData(entregas.get(j).getData_entrega()),81.13671875), 0, i+1);
             gp_dados.add(new TextData(entregas.get(j).getEpi(), 109.13671875), 1, i+1);
             gp_dados.add(new TextData(entregas.get(j).getFunc(), 98.13671875), 2, i+1);
             gp_dados.add(new TextData(Integer.toString(entregas.get(j).getVida_util()), 42.13671875), 3, i+1);
             gp_dados.add(new TextData(Integer.toString(entregas.get(j).getQuant()), 37.13671875), 4, i+1);
-            Label value6 = new Label(Integer.toString(entregas.get(j).dataFaltante()));
-            value6.setPrefHeight(36);
-            value6.setPrefWidth(70);
-            value6.setAlignment(Pos.CENTER);
-            value6.setStyle("-fx-border-color: black");
-            
-            if(entregas.get(j).dataFaltante() <= 10)
-                value6.setStyle("-fx-background-color: #FF6347");
-            else if(entregas.get(j).dataFaltante() > 10 && entregas.get(j).dataFaltante() <= 30)
-                value6.setStyle("-fx-background-color: #FFFF00");
-            else
-                value6.setStyle("-fx-background-color: #98FB98");
-            
             gp_dados.add(new VencimentoLabel(entregas.get(j).dataFaltante()), 5, i+1);
             
             Label value7 = new Label();
@@ -125,7 +112,7 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
             }
                 
             
-            gp_dados.add(value7, 6, i+1);
+            gp_dados.add(new ConfirmLabel(entregas.get(j).isConfirmado()), 6, i+1);
             gp_dados.add(new DevolverButton("bt_devolver_" + entregas.get(i).getId()), 7, i+1);
         }
     }
