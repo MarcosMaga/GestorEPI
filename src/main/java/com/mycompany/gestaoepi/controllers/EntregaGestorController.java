@@ -6,6 +6,8 @@ package com.mycompany.gestaoepi.controllers;
 
 import com.mycompany.gestaoepi.App;
 import com.mycompany.gestaoepi.components.DevolverButton;
+import com.mycompany.gestaoepi.components.TextData;
+import com.mycompany.gestaoepi.components.VencimentoLabel;
 import com.mycompany.gestaoepi.components.factories.ButtonFactory;
 import com.mycompany.gestaoepi.dao.EntregaDao;
 import com.mycompany.gestaoepi.helpers.ScreenHelpers;
@@ -87,29 +89,12 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
             j -= entregas.size();
         
        
-        for(int i=0; i < index; i++, j++){
-            Text value1 = new Text();
-            value1.setText(formatData(entregas.get(j).getData_entrega()));
-            value1.setWrappingWidth(81.13671875);
-            value1.setTextAlignment(TextAlignment.CENTER);
-            gp_dados.add(value1, 0, i+1);
-            Text value2 = new Text();
-            value2.setText(entregas.get(j).getEpi());
-            value2.setWrappingWidth(109.13671875);
-            value2.setTextAlignment(TextAlignment.CENTER);
-            gp_dados.add(value2, 1, i+1);
-            Text value3 = new Text(entregas.get(j).getFunc());
-            value3.setWrappingWidth(98.13671875);
-            value3.setTextAlignment(TextAlignment.CENTER);
-            gp_dados.add(value3, 2, i+1);
-            Text value4 = new Text(Integer.toString(entregas.get(j).getVida_util()));
-            value4.setWrappingWidth(42.13671875);
-            value4.setTextAlignment(TextAlignment.CENTER);
-            gp_dados.add(value4, 3, i+1);
-            Text value5 = new Text(Integer.toString(entregas.get(j).getQuant()));
-            value5.setWrappingWidth(37.13671875);
-            value5.setTextAlignment(TextAlignment.CENTER);
-            gp_dados.add(value5, 4, i+1);
+        for(int i=0; i < index; i++, j++){    
+            gp_dados.add(new TextData(formatData(entregas.get(j).getData_entrega()),81.13671875), 0, i+1);
+            gp_dados.add(new TextData(entregas.get(j).getEpi(), 109.13671875), 1, i+1);
+            gp_dados.add(new TextData(entregas.get(j).getFunc(), 98.13671875), 2, i+1);
+            gp_dados.add(new TextData(Integer.toString(entregas.get(j).getVida_util()), 42.13671875), 3, i+1);
+            gp_dados.add(new TextData(Integer.toString(entregas.get(j).getQuant()), 37.13671875), 4, i+1);
             Label value6 = new Label(Integer.toString(entregas.get(j).dataFaltante()));
             value6.setPrefHeight(36);
             value6.setPrefWidth(70);
@@ -123,7 +108,7 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
             else
                 value6.setStyle("-fx-background-color: #98FB98");
             
-            gp_dados.add(value6, 5, i+1);
+            gp_dados.add(new VencimentoLabel(entregas.get(j).dataFaltante()), 5, i+1);
             
             Label value7 = new Label();
             value7.setPrefHeight(34);
