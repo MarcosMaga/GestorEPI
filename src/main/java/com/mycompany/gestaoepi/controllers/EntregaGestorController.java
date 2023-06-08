@@ -141,26 +141,8 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
                 
             
             gp_dados.add(value7, 6, i+1);
-            
-            Button bt = new Button("Devolver");
-            bt.setPrefHeight(25);
-            bt.setPrefWidth(65);
-            bt.setStyle("-fx-text-fill: white; -fx-background-color: #337AB7;");
-            bt.setId("bt_devolver_" + i);
-            bt.setOnAction((event) -> {
-                devolverEntrega(event);
-            });
             gp_dados.add(new DevolverButton("bt_devolver_" + entregas.get(i).getId()), 7, i+1);
         }
-    }
-    
-    public void devolverEntrega(ActionEvent e){
-        Button a = (Button)e.getSource();
-        String value = a.getId();
-        value = value.replace("bt_devolver_", "");
-        int index = Integer.parseInt(value);
-        DevolverGestorController controller = (DevolverGestorController) App.changeMainScreenData("DevolverGestor");
-        controller.setData(entregas.get(index));
     }
     
     public void nextPage(){
