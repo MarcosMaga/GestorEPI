@@ -96,22 +96,6 @@ public class EntregaGestorController extends ScreenHelpers implements Initializa
             gp_dados.add(new TextData(Integer.toString(entregas.get(j).getVida_util()), 42.13671875), 3, i+1);
             gp_dados.add(new TextData(Integer.toString(entregas.get(j).getQuant()), 37.13671875), 4, i+1);
             gp_dados.add(new VencimentoLabel(entregas.get(j).dataFaltante()), 5, i+1);
-            
-            Label value7 = new Label();
-            value7.setPrefHeight(34);
-            value7.setPrefWidth(38);
-            value7.setAlignment(Pos.CENTER);
-            
-            if(entregas.get(j).isConfirmado()){
-                value7.setStyle("-fx-text-fill: #98FB98");
-                value7.setText("✔");
-            }  
-            else{
-                value7.setStyle("-fx-text-fill: #FF6347");
-                value7.setText("❌");
-            }
-                
-            
             gp_dados.add(new ConfirmLabel(entregas.get(j).isConfirmado()), 6, i+1);
             gp_dados.add(new DevolverButton("bt_devolver_" + entregas.get(i).getId()), 7, i+1);
         }
