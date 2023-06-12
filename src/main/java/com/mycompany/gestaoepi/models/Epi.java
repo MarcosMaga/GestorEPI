@@ -4,26 +4,18 @@
  */
 package com.mycompany.gestaoepi.models;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author Marcos
  */
-public class Epi {
+public class Epi extends ModelBase{
 
-    private String id;
-    private String nome;
     private String ca;
     private String marca;
     private int vidaUtil;
@@ -31,21 +23,12 @@ public class Epi {
     private Date dataValidade;
 
     public Epi(String _id, String _nome, String _ca, String _marca, int _vidaUtil, int _quant, Date _dataValidade) {
-        this.id = _id;
-        this.nome = _nome;
+        super(_id, _nome);
         this.ca = _ca;
         this.marca = _marca;
         this.vidaUtil = _vidaUtil;
         this.quant = _quant;
         this.dataValidade = _dataValidade;
-    }
-
-    public String getId() {
-        return this.id;
-    }
-
-    public String getNome() {
-        return this.nome;
     }
 
     public String getCa() {
@@ -80,7 +63,7 @@ public class Epi {
 
     @Override
     public String toString() {
-        return this.nome + " | Data Vencimento: " + this.dataValidade.toString() + " | Vida Util: " + this.vidaUtil + " | Quant: " + this.quant;
+        return this.getNome() + " | Data Vencimento: " + this.dataValidade.toString() + " | Vida Util: " + this.vidaUtil + " | Quant: " + this.quant;
     }
 
     public boolean isValid(LocalDate entrega, int quantidade) {

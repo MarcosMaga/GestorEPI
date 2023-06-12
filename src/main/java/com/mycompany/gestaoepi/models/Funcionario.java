@@ -8,31 +8,20 @@ package com.mycompany.gestaoepi.models;
  *
  * @author Marcos
  */
-public class Funcionario {
-    private String id;
+public class Funcionario extends ModelBase{
     private String reg;
-    private String nome;
     private String email;
     private String setor;
     
     public Funcionario(String _id, String _reg, String _nome, String _email, String _setor){
-        this.id = _id;
+        super(_id, _nome);
         this.reg = _reg;
-        this.nome = _nome;
         this.email = _email;
         this.setor = _setor;
     }
     
-    public String getId(){
-        return this.id;
-    }
-    
     public String getReg(){
         return this.reg;
-    }
-    
-    public String getNome(){
-        return this.nome;
     }
     
     public String getEmail(){
@@ -45,6 +34,6 @@ public class Funcionario {
     
     @Override
     public String toString(){
-        return this.nome;
+        return this.getNome();
     }
 }

@@ -8,29 +8,18 @@ package com.mycompany.gestaoepi.models;
  *
  * @author Marcos
  */
-public class User {
-    private String id;
+public class User extends ModelBase{
     private String email;
-    private String nome;
     private String empresa;
     
     public User(String _id, String _email, String _nome, String _empresa){
-        this.id = _id;
+        super(_id,_nome);
         this.email = _email;
-        this.nome = _nome;
         this.empresa = _empresa;
-    }
-    
-    public String getId(){
-        return this.id;
     }
     
     public String getEmail(){
         return this.email;
-    }
-    
-    public String getNome(){
-        return this.nome;
     }
     
     public String getEmpresa(){

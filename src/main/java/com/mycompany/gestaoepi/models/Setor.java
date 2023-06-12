@@ -8,29 +8,20 @@ package com.mycompany.gestaoepi.models;
  *
  * @author Marcos
  */
-public class Setor {
+public class Setor extends ModelBase {
     private String id;
     private String cod;
     private String nome;
     
     public Setor(String _id, String _cod, String _nome){
-        this.id = _id;
+        super(_id, _nome);
         this.cod = _cod;
-        this.nome = _nome;
-    }
-    
-    public String getId(){
-        return this.id;
     }
     
     public String getCod(){
         return this.cod;
     }
-    
-    public String getNome(){
-        return this.nome;
-    }
-        
+     
     @Override
     public String toString(){
         return this.nome;
