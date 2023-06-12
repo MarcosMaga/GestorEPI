@@ -9,9 +9,7 @@ package com.mycompany.gestaoepi.models;
  * @author Marcos
  */
 public class Setor extends ModelBase {
-    private String id;
     private String cod;
-    private String nome;
     
     public Setor(String _id, String _cod, String _nome){
         super(_id, _nome);
@@ -24,6 +22,6 @@ public class Setor extends ModelBase {
      
     @Override
     public String toString(){
-        return this.nome;
+        return this.getNome();
     }
 }
